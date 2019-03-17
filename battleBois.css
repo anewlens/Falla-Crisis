@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  --background-white: hsl(50, 10%, 90%);
+  --navyBlue: hsla(196, 21.6%, 15%, 1);
+  background-color: var(--background-white);
+}
+
+nav {
+  background-color: var(--navyBlue);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  background-color: var(--navyBlue);
+}
+
+nav ul li {
+  background-color: var(--navyBlue);
+  color: var(--background-white);
+  position: relative;
+  display: block;
+  padding: 1rem;
+  font-family: serif;
+  font-size: 1.1em;
+  transition-duration: 0.5s;
+}
+
+a {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: hsla(196, 21.6%, 30%, 1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 10px;
+}
+
+.container {
+  margin: 20px 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  box-shadow: 4px 4px 12px lightgrey;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: var(--navyBlue);
+}
+
+section h2, p, em {
+  background-color: white;
+}
+
+.subtitle {
+  margin: 0px 0px 8px 0px;
+  background-color: white;
+}
+
+#alfengor {
+  color: hsla(196, 21.6%, 15%, .5);
+}
