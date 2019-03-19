@@ -22,7 +22,7 @@ nav ul li {
   position: relative;
   display: block;
   padding: 1rem;
-  font-family: serif;
+  font-family: 'Eczar', serif;
   font-size: 1.1em;
   transition-duration: 0.5s;
 }
@@ -39,36 +39,108 @@ nav ul li:hover {
 
 h1 {
   text-align: center;
-  font-size: 3em;
-  margin: 10px;
+  font-family: 'Eczar', serif;
+  font-size: 5em;
+  color: var(--navyBlue);
+  margin: 20px;
 }
 
 .container {
-  margin: 20px 20vw;
+  margin: 20px 15vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 section {
   box-shadow: 4px 4px 12px lightgrey;
   padding: 20px;
-  width: 200px;
+  width: 300px;
   border-radius: 15px;
   margin-bottom: 20px;
   background-color: white;
   color: var(--navyBlue);
 }
 
+section h2 {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-family: 'Eczar', serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
 section h2, p, em {
-  background-color: white;
+  background-color: inherit;
+}
+
+.imgcontainer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+  border: 7px solid hsl(196, 21.6%, 40%);
+}
+
+section img {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%; //centers the image
+  height: 100%;
+  width: auto;
+}
+
+#alfengor-img {
+  position: relative;
+  height: 330%;
+  right: 80px;
+}
+
+#discite-img {
+  position: relative;
+  height: 600%;
+  bottom: 170px;
+  right: 200px;
+}
+
+#lailius-img {
+  position: relative;
+  bottom: 40px;
+  right: 250px;
+}
+
+#michann-img {
+  position: relative;
+  bottom: 220px;
+  right: 245px;
+}
+
+#orianna-img {
+  position: relative;
+  height: 500%;
+  right: 100px;
+  bottom: 100px;
+}
+
+#pavlov-img {
+  position: relative;
+  height: 300%;
+  right: 40px;
+}
+
+section p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  margin: 0px 8px 8px 8px;
 }
 
 .subtitle {
-  margin: 0px 0px 8px 0px;
-  background-color: white;
+  background-color: inherit;
+  text-align: center;
 }
 
-#alfengor {
+.deceased {
   color: hsla(196, 21.6%, 15%, .5);
 }
