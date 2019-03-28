@@ -63,7 +63,7 @@ img {
   font-size: 16pt;
 }
 
-@media only screen (max-width:800px) {
+@media screen and (max-width:800px) {
   nav {
     justify-content: flex-end;
   }
