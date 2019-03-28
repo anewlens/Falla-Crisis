@@ -2,12 +2,16 @@
   margin: 0px;
   --background-white: hsl(50, 10%, 90%);
   --navyBlue: hsla(196, 21.6%, 15%, 1);
+  --blue: hsla(196, 21.6%, 30%, 1);
   background-color: var(--background-white);
   color: var(--navyBlue);
 }
 
 nav {
+  top: 0px;
   background-color: var(--navyBlue);
+  position: fixed;
+  width: 100vw;
 }
 
 nav ul {
@@ -23,7 +27,7 @@ nav ul li {
   position: relative;
   display: block;
   padding: 1rem;
-  font-family: serif;
+  font-family: 'Eczar', serif;
   font-size: 1.1em;
   transition-duration: 0.5s;
 }
@@ -38,20 +42,73 @@ a {
   text-decoration: none;
 }
 
+#cityNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#cityNav li a {
+  font-family: 'Eczar', serif;
+  font-size: 1.5em;
+  color: var(--blue);
+}
+
 article {
-  margin: 20px 20vw;
+  margin: 50px 25vw;
 }
 
 article h1 {
   text-align: center;
-  font-size: 3em;
+  font-family: 'Eczar', serif;
+  font-size: 6em;
   padding: 10px;
 }
 
-article h2 {
-  padding-bottom: 10px;
+#cityNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-article p {
+#citynav li {
+  list-style: none;
+  padding-right: 50px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-family: 'Eczar', serif;
+  font-size: 3em;
+  color: var(--blue);
+  margin-bottom: 0px;
+}
+
+section p, section li {
   margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  list-style: square;
+}
+
+strong {
+  color: var(--blue)
+}
+
+@media (max-width: 800px) {
+  article {
+    margin: 50px 5vw;
+  }
+
+  article h1 {
+    font-size: 2.5em;
+  }
+
+  article h2 {
+    font-size: 2em;
+  }
 }

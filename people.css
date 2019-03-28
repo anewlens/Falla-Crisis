@@ -68,8 +68,10 @@ section h2 {
   justify-content: space-between;
 }
 
-.person img {
-  height: 70vh;
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   margin-right: 40px;
   border: 5px solid var(--navyBlue);
 }
@@ -90,7 +92,7 @@ section h2 {
 }
 
 .text p {
-  font-size: 2em;
+  font-size: 16pt;
   font-family: 'Lato', sans-serif;
   margin-bottom: 20px;
   color: var(--blue)
