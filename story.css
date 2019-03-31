@@ -2,16 +2,16 @@
   margin: 0px;
   --background-white: hsl(50, 10%, 90%);
   --navyBlue: hsla(196, 21.6%, 15%, 1);
-  --blue: hsla(196, 21.6%, 30%, 1);
+  --blue: hsla(196, 50%, 30%, 1);
   background-color: var(--background-white);
   color: var(--navyBlue);
 }
 
 nav {
-  top: 0px;
   background-color: var(--navyBlue);
-  position: fixed;
-  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
@@ -25,15 +25,28 @@ nav ul li {
   background-color: var(--navyBlue);
   color: var(--background-white);
   position: relative;
-  display: block;
   padding: 1rem;
   font-family: 'Eczar', serif;
   font-size: 1.1em;
   transition-duration: 0.5s;
 }
 
+a {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
 nav ul li:hover {
   background-color: hsla(196, 21.6%, 30%, 1);
+}
+
+#menu-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: var(--navyBlue) url(images/menu-icon.png) center;
+  margin: .5rem 2rem;
 }
 
 a {
@@ -56,16 +69,17 @@ a {
 }
 
 article {
-  margin: 50px 25vw;
+  margin: 0px 25vw;
 }
 
 article h1 {
   text-align: center;
   font-family: 'Eczar', serif;
-  font-size: 6em;
+  font-size: 4em;
   padding: 10px;
 }
 
+/* FOR LATER
 #cityNav {
   display: flex;
   flex-direction: row;
@@ -76,8 +90,7 @@ article h1 {
 #citynav li {
   list-style: none;
   padding-right: 50px;
-}
-
+}*/
 section {
   margin-bottom: 30px;
 }
@@ -99,9 +112,42 @@ strong {
   color: var(--blue)
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav ul, nav:active ul {
+    display: none;
+    position: absolute;
+    background: none;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
   article {
-    margin: 50px 5vw;
+    margin: 0px 5vw;
   }
 
   article h1 {

@@ -7,6 +7,9 @@
 
 nav {
   background-color: var(--navyBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
@@ -20,7 +23,6 @@ nav ul li {
   background-color: var(--navyBlue);
   color: var(--background-white);
   position: relative;
-  display: block;
   padding: 1rem;
   font-family: 'Eczar', serif;
   font-size: 1.1em;
@@ -37,12 +39,22 @@ nav ul li:hover {
   background-color: hsla(196, 21.6%, 30%, 1);
 }
 
+#menu-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: var(--navyBlue) url(images/menu-icon.png) center;
+  margin: .5rem 2rem;
+}
+
+/*END NAV*/
 h1 {
   text-align: center;
   font-family: 'Eczar', serif;
   font-size: 5em;
   color: var(--navyBlue);
-  margin: 20px;
+  margin: 20px 0;
+  width: 100vw;
 }
 
 .container {
@@ -144,3 +156,46 @@ section p {
 .deceased {
   color: hsla(196, 21.6%, 15%, .5);
 }
+
+@media screen and (max-width:800px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav ul, nav:active ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: none;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
+  .container {
+    margin: 0px 5vw;
+  }
+
+  .container h1 {
+    font-size: 3em;
+  }
