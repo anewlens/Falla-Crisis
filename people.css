@@ -1,5 +1,5 @@
 * {
-  margin: 0px;
+  margin: 0;
   --background-white: hsl(50, 10%, 90%);
   --navyBlue: hsla(196, 21.6%, 15%, 1);
   --blue: hsla(196, 21.6%, 30%, 1);
@@ -7,6 +7,9 @@
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--navyBlue);
 }
 
@@ -40,18 +43,20 @@ nav ul li:hover {
 
 /*Main Content */
 section {
-  margin: 30px 10vw;
+  margin: 30px 15vw;
 }
 
-#cult {
+.group {
   color: var(--navyBlue);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-section h2 {
+.group-heading {
+  text-align: center;
+  margin-bottom: 20px;
   font-family: 'Eczar', serif;
   font-size: 6em;
   line-height: 1em;
@@ -59,31 +64,31 @@ section h2 {
 }
 
 .person {
-  margin: 30px 0px;
   padding: 30px;
   border-left: 10px solid var(--blue);
   border-top: 3px solid var(--blue);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  max-width: 95%;
 }
 
-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+.person-image {
+  height: 50vh;
   margin-right: 40px;
   border: 5px solid var(--navyBlue);
 }
 
-.text h3 {
+.person-content {}
+
+.person .-name {
   font-family: 'Eczar', serif;
   font-size: 4em;
   line-height: 1em;
   color: var(--navyBlue)
 }
 
-.text h4 {
+.person .-title {
   font-family: 'Eczar', serif;
   font-size: 2.5em;
   line-height: 1em;
@@ -91,9 +96,14 @@ img {
   margin-bottom: 10px;
 }
 
-.text p {
+.person-text {
   font-size: 16pt;
   font-family: 'Lato', sans-serif;
   margin-bottom: 20px;
-  color: var(--blue)
+  color: var(--blue);
+  line-height: 1.5em;
+}
+
+.person-text p {
+  margin-bottom: 10px;
 }

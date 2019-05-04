@@ -1,8 +1,8 @@
 * {
   margin: 0px;
   --background-white: hsl(50, 10%, 90%);
-  --navyBlue: hsla(196, 21.6%, 15%, 1);
-  background-color: var(--background-white);
+  --navyBlue: hsla(196, 21.6%, 5%, 1);
+  background-color: var(--navyBlue);
   color: var(--navyBlue);
 }
 
@@ -48,22 +48,31 @@ nav ul li:hover {
   margin: .5rem 2rem;
 }
 
+/*CONTENT*/
+#hero {
+  background-image: linear-gradient(var(--navyBlue) 0%, transparent 50%, var(--navyBlue) 100%), url(images/FallaTitleCard.png);
+  background-size: cover;
+  height: 95vh;
+  width: auto;
+}
+
 img {
   width: 100%;
   height: auto;
 }
 
 #backstory {
-  margin: 30px 25vw;
+  margin: 60px 25vw 20vh 25vw;
   font-family: 'Open Sans', sans-serif;
 }
 
 #backstory p {
   margin-bottom: 30px;
   font-size: 16pt;
+  color: var(--background-white);
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   nav {
     justify-content: flex-end;
   }
@@ -97,7 +106,14 @@ img {
     display: block;
   }
 
+  #hero {
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 30vh;
+  }
+
   #backstory {
-    margin: 20px 5vw 50px 5vw;
+    margin: 0 5vw 50px 5vw;
   }
 }
